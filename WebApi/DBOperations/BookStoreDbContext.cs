@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 
+
+//Model dosyasıdır aslında
 namespace WebApi.DBOperations
 {
     public class BookStoreDbContext : DbContext
