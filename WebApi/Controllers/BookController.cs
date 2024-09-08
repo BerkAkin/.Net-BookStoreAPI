@@ -58,5 +58,42 @@ namespace WebApi.Controllers
                     return book;
                 } 
         */
+
+        //Post ve Put Örnekleri
+
+        //Book'un kalıbına uygun bir json gelmeli front-end tarafından body bilgisi olarak gelecek bu sayede otomatik olarak requesti alacak ve işlemleri yapacak
+        [HttpPost]
+        public IActionResult AddBook([FromBody] Book newBook)
+        {
+            var book = BookList.SingleOrDefault(x => x.Title == newBook.Title);
+            if (book is not null)
+            {
+                return BadRequest();
+            }
+            else
+            {
+                BookList.Add(newBook);
+                return Ok();
+            }
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateBook(int id, [FromBody] Book updatedBook)
+        {
+            var book = BookList.SingleOrDefault(x => x.Id == id);
+            if (book is not null)
+            {
+                book.Title = updatedBook.Title != default ? updatedBook.Title : book.Title;
+                book.Author = updatedBook.Author != default ? updatedBook.Author : book.Author;
+                book.PublishDate = updatedBook.PublishDate != default ? updatedBook.PublishDate : book.PublishDate;
+                book.GenreId = updatedBook.GenreId != default ? updatedBook.GenreId : book.GenreId;
+                book.PageCount = updatedBook.PageCount != default ? updatedBook.PageCount : book.PageCount;
+                return Ok();
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
     }
 }
