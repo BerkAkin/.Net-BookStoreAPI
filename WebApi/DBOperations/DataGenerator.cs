@@ -24,7 +24,6 @@ namespace WebApi.DBOperations
                     context.Books.AddRange(
                       new Book
                       {
-                          Id = 1,
                           Title = "Lean Startup",
                           GenreId = 1,
                           PageCount = 200, //Personal Growth
