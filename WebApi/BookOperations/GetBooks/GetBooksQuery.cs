@@ -24,7 +24,7 @@ namespace WebApi.BookOperations.GetBooks
                 vm.Add(new BooksViewModel()
                 {
                     Title = book.Title,
-                    Genre = ((GenreEnum)book.GenreId).oString(),
+                    Genre = ((GenreEnum)book.GenreId).ToString(),
                     PublishDate = book.PublishDate.Date.ToString("dd/MM/yyyy"),
                     PageCount = book.PageCount,
                 });
