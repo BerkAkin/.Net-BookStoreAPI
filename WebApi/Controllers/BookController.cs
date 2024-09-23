@@ -2,11 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-<<<<<<< HEAD
 using WebApi.BookOperations.CreateBook;
 using WebApi.BookOperations.GetBooks;
-=======
->>>>>>> c528338fb3565e788a7b673f232ddb55f43f7140
 using WebApi.DBOperations;
 
 namespace WebApi.Controllers
@@ -16,10 +13,6 @@ namespace WebApi.Controllers
     public class BookController : ControllerBase
     {
         private readonly BookStoreDbContext _context;
-<<<<<<< HEAD
-
-=======
->>>>>>> c528338fb3565e788a7b673f232ddb55f43f7140
         public BookController(BookStoreDbContext context)
         {
             _context = context;
@@ -28,14 +21,9 @@ namespace WebApi.Controllers
         [HttpGet]
         public IActionResult GetBooks()
         {
-<<<<<<< HEAD
             GetBooksQuery query = new GetBooksQuery(_context);
             var result = query.Handle();
             return Ok(result);
-=======
-            var bookList = _context.Books.OrderBy(x => x.Id).ToList<Book>();
-            return bookList;
->>>>>>> c528338fb3565e788a7b673f232ddb55f43f7140
         }
 
         [HttpGet("{Id}")]
@@ -52,12 +40,7 @@ namespace WebApi.Controllers
         [HttpPost]
         public IActionResult AddBook([FromBody] CreateBookModel newBook)
         {
-<<<<<<< HEAD
             try
-=======
-            var book = _context.Books.SingleOrDefault(x => x.Title == newBook.Title);
-            if (book is not null)
->>>>>>> c528338fb3565e788a7b673f232ddb55f43f7140
             {
                 CreateBookCommand command = new CreateBookCommand(_context);
                 command.Model = newBook;
@@ -66,13 +49,7 @@ namespace WebApi.Controllers
             }
             catch (Exception ex)
             {
-<<<<<<< HEAD
                 return BadRequest(ex.Message);
-=======
-                _context.Books.Add(newBook);
-                _context.SaveChanges();
-                return Ok();
->>>>>>> c528338fb3565e788a7b673f232ddb55f43f7140
             }
 
         }
@@ -104,10 +81,6 @@ namespace WebApi.Controllers
             if (book is not null)
             {
                 _context.Books.Remove(book);
-<<<<<<< HEAD
-=======
-                _context.SaveChanges();
->>>>>>> c528338fb3565e788a7b673f232ddb55f43f7140
                 return Ok();
             }
             else
