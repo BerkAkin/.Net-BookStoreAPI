@@ -60,7 +60,7 @@ namespace WebApi.Controllers
         {
             try
             {
-                CreateBookCommand command = new CreateBookCommand(_context);
+                CreateBookCommand command = new CreateBookCommand(_context, _mapper);
                 command.Model = newBook;
                 command.Handle();
                 return Ok("Kitap Eklendi");
