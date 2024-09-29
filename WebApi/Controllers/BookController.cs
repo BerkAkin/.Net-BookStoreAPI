@@ -9,6 +9,7 @@ using WebApi.BookOperations.CreateBook;
 using WebApi.BookOperations.DeleteBook;
 using WebApi.BookOperations.GetBooks;
 using WebApi.BookOperations.UpdateBook;
+using WebApi.BookOperations.UpdateBooks;
 using WebApi.DBOperations;
 
 namespace WebApi.Controllers
@@ -99,6 +100,10 @@ namespace WebApi.Controllers
                 UpdateBookCommand command = new UpdateBookCommand(_context);
                 command.BookId = id;
                 command.Model = updatedBook;
+
+                UpdateBookCommandValidator validator = new UpdateBookCommandValidator();
+                validator.ValidateAndThrow(command);
+
                 command.Handle();
                 return Ok("Kitap Güncellendi");
             }
