@@ -6,7 +6,7 @@ using WebApi.DBOperations;
 
 namespace WebApi.BookOperations.UpdateBook
 {
-    class UpdateBookCommand
+    public class UpdateBookCommand
     {
         private readonly BookStoreDbContext _dbContext;
         public int BookId;
