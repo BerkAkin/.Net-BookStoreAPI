@@ -24,17 +24,19 @@ namespace WebApi.Application.GenreOperations.Commands.UpdateGenre
             {
                 throw new InvalidOperationException("Tür Bulunamadı, güncelleme işleminde hata meydana geldi");
             }
-            else
+            if (_context.Genres.Any(x => x.Name.ToLower() == Model.Name.ToLower() && x.Id != GenreId))
             {
-                genre.Name = Model.Name != default ? Model.Name : genre.Name;
-                genre.IsActive = Model.IsActive != default ? Model.IsActive : genre.IsActive;
-                _context.SaveChanges();
+                throw new InvalidOperationException("Aynı isimli bir tür var");
             }
+
+            genre.Name = Model.Name.Trim() != default ? Model.Name : genre.Name;
+            genre.IsActive = Model.IsActive;
+            _context.SaveChanges();
         }
     }
     public class UpdateGenreViewModel
     {
         public string Name { get; set; }
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
     }
 }
