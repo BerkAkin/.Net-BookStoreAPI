@@ -26,13 +26,6 @@ namespace WebApi.Application.BookOperations.Queries.GetBooks
             if (book is not null)
             {
                 BookDetailViewModel vm = _mapper.Map<BookDetailViewModel>(book);
-                /*  
-                    new BookDetailViewModel();   
-                    vm.Title = book.Title;
-                    vm.PublishDate = book.PublishDate.ToString("dd/MM/yyyy");
-                    vm.PageCount = book.PageCount;
-                    vm.Genre = ((GenreEnum)book.GenreId).ToString(); 
-                */
                 return vm;
             }
             else
