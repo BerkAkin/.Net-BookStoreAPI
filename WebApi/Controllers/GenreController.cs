@@ -29,7 +29,7 @@ namespace WebApi.Controllers
 
 
         [HttpGet]
-        public ActionResult GetGenres()
+        public IActionResult GetGenres()
         {
             GetGenresQuery query = new GetGenresQuery(_context, _mapper);
             var obj = query.Handle();
@@ -41,7 +41,7 @@ namespace WebApi.Controllers
 
 
         [HttpGet("{id}")]
-        public ActionResult GetGenreById(int id)
+        public IActionResult GetGenreById(int id)
         {
             GetGenresDetailQuery query = new GetGenresDetailQuery(_context, _mapper);
             query.GenreId = id;
@@ -56,7 +56,7 @@ namespace WebApi.Controllers
 
 
         [HttpPost]
-        public ActionResult AddGenre([FromBody] CreateGenreViewModel newGenre)
+        public IActionResult AddGenre([FromBody] CreateGenreViewModel newGenre)
         {
             CreateGenreCommand command = new CreateGenreCommand(_context);
             command.Model = newGenre;
@@ -71,7 +71,7 @@ namespace WebApi.Controllers
 
 
         [HttpPut("{id}")]
-        public ActionResult UpdateGenre(int id, [FromBody] UpdateGenreViewModel updateGenre)
+        public IActionResult UpdateGenre(int id, [FromBody] UpdateGenreViewModel updateGenre)
         {
             UpdateGenreCommand command = new UpdateGenreCommand(_mapper, _context);
             command.GenreId = id;
@@ -89,7 +89,7 @@ namespace WebApi.Controllers
 
 
         [HttpDelete("{id}")]
-        public ActionResult DeleteGenre(int id)
+        public IActionResult DeleteGenre(int id)
         {
             DeleteGenreCommand command = new DeleteGenreCommand(_context);
             DeleteGenreCommandValidator validator = new DeleteGenreCommandValidator();
