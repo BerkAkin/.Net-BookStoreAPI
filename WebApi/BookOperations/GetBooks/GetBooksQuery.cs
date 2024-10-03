@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using WebApi.Common;
 using WebApi.DBOperations;
-
+using WebApi.Entities;
 namespace WebApi.BookOperations.GetBooks
 {
     public class GetBooksQuery

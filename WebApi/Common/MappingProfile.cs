@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using AutoMapper;
 using WebApi.BookOperations.CreateBook;
 using WebApi.BookOperations.GetBooks;
-
+using WebApi.Entities;
 namespace WebApi.Common
 {
     public class MappingProfile : Profile
