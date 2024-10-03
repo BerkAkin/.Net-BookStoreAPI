@@ -1,10 +1,10 @@
 using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using WebApi.Application.BookOperations.GetBooks;
+using WebApi.Application.BookOperations.Queries.GetBooks;
 using WebApi.DBOperations;
 
-namespace WebApi.Application.BookOperations.UpdateBook
+namespace WebApi.Application.BookOperations.Commands.UpdateBook
 {
     public class UpdateBookCommand
     {
