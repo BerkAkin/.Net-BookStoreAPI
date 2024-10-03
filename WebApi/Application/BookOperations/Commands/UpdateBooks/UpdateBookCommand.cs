@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using WebApi.Application.BookOperations.Queries.GetBooks;
 using WebApi.DBOperations;
 
-namespace WebApi.Application.BookOperations.Commands.UpdateBook
+namespace WebApi.Application.BookOperations.Commands.UpdateBooks
 {
-    public class UpdateBookCommand
+    public class UpdateBooksCommand
     {
         private readonly BookStoreDbContext _dbContext;
         public int BookId;
         public UpdateBookModel Model { get; set; }
-        public UpdateBookCommand(BookStoreDbContext dbContext)
+        public UpdateBooksCommand(BookStoreDbContext dbContext)
         {
             _dbContext = dbContext;
         }
