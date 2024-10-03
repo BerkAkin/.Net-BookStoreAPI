@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using WebApi.Entities;
 
 
 //Model dosyasıdır aslında
