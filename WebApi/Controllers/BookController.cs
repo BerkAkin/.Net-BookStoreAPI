@@ -5,11 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using WebApi.BookOperations.CreateBook;
-using WebApi.BookOperations.DeleteBook;
-using WebApi.BookOperations.GetBooks;
-using WebApi.BookOperations.UpdateBook;
-using WebApi.BookOperations.UpdateBooks;
+using WebApi.Application.BookOperations.Commands.CreateBook;
+using WebApi.Application.BookOperations.Commands.DeleteBook;
+using WebApi.Application.BookOperations.Queries.GetBooks;
+using WebApi.Application.BookOperations.Commands.UpdateBooks;
 using WebApi.DBOperations;
 
 namespace WebApi.Controllers
@@ -71,7 +70,7 @@ namespace WebApi.Controllers
         [HttpPut("{id}")]
         public IActionResult UpdateBook(int id, [FromBody] UpdateBookModel updatedBook)
         {
-            UpdateBookCommand command = new UpdateBookCommand(_context);
+            UpdateBooksCommand command = new UpdateBooksCommand(_context);
             command.BookId = id;
             command.Model = updatedBook;
             UpdateBookCommandValidator validator = new UpdateBookCommandValidator();
