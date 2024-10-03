@@ -21,6 +21,37 @@ namespace WebApi.DBOperations
                 }
                 else
                 {
+                    context.Genres.AddRange(
+                        new Genre
+                        {
+                            Name = "Personal Growth",
+                        },
+                        new Genre
+                        {
+                            Name = "Science Fiction"
+                        },
+                        new Genre
+                        {
+                            Name = "Romance"
+                        },
+                        new Genre
+                        {
+                            Name = "Horror"
+                        },
+                        new Genre
+                        {
+                            Name = "Documentary"
+                        },
+                        new Genre
+                        {
+                            Name = "Action"
+                        },
+                        new Genre
+                        {
+                            Name = "Adventure"
+                        }
+                    );
+
                     context.Books.AddRange(
                       new Book
                       {
