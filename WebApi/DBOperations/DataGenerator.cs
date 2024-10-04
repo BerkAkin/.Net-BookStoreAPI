@@ -59,7 +59,7 @@ namespace WebApi.DBOperations
                           GenreId = 1,
                           PageCount = 200, //Personal Growth
                           PublishDate = new DateTime(2001, 09, 02),
-                          Author = "Berk Akın"
+                          AuthorId = 1
                       }
                     );
 
