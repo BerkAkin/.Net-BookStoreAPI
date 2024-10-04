@@ -62,6 +62,21 @@ namespace WebApi.DBOperations
                           Author = "Berk Akın"
                       }
                     );
+
+                    context.Authors.AddRange(
+                        new Author
+                        {
+                            Name = "Stefan",
+                            Surname = "Zweig",
+                            BirthDate = new DateTime(1948, 2, 3)
+                        },
+                        new Author
+                        {
+                            Name = "John",
+                            Surname = "Milton",
+                            BirthDate = new DateTime(1978, 4, 12)
+                        }
+                    );
                 }
                 context.SaveChanges();
             }
