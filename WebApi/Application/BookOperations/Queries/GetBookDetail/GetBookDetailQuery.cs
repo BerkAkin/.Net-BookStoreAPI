@@ -20,7 +20,7 @@ namespace WebApi.Application.BookOperations.Queries.GetBooks
 
         public BookDetailViewModel Handle()
         {
-            var book = _dbContext.Books.Include(x => x.Genre).Where(book => book.Id == BookId).SingleOrDefault();
+            var book = _dbContext.Books.Include(x => x.Genre).Include(a => a.Author).Where(book => book.Id == BookId).SingleOrDefault();
             if (book is not null)
             {
                 BookDetailViewModel vm = _mapper.Map<BookDetailViewModel>(book);
@@ -41,5 +41,6 @@ namespace WebApi.Application.BookOperations.Queries.GetBooks
         public int PageCount { get; set; }
         public string PublishDate { get; set; }
         public string Genre { get; set; }
+        public string Author { get; set; }
     }
 }
