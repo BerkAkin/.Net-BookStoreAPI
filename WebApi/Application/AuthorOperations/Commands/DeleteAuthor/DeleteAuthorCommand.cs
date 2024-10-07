@@ -8,9 +8,9 @@ namespace WebApi.Application.AuthorOperations.Commands.DeleteAuthor
 {
     public class DeleteAuthorCommand
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
         public int Id { get; set; }
-        public DeleteAuthorCommand(BookStoreDbContext context)
+        public DeleteAuthorCommand(IBookStoreDbContext context)
         {
             _context = context;
         }
@@ -27,7 +27,7 @@ namespace WebApi.Application.AuthorOperations.Commands.DeleteAuthor
             if (booksOfAuthor is not null)
                 throw new InvalidOperationException(author.Name + " " + author.Surname + " Yazarın kitabı/kitapları mevcut. Önce kitap/kitaplar silinmeli");
 
-            _context.Remove(author);
+            _context.Authors.Remove(author);
             _context.SaveChanges();
 
         }

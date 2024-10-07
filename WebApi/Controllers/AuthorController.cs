@@ -1,20 +1,11 @@
 using AutoMapper;
 using FluentValidation;
-using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using WebApi.Application.AuthorOperations.Commands.CreateAuthor;
 using WebApi.Application.AuthorOperations.Commands.DeleteAuthor;
 using WebApi.Application.AuthorOperations.Commands.UpdateAuthor;
 using WebApi.Application.AuthorOperations.Queries.GetAuthorDetail;
 using WebApi.Application.AuthorOperations.Queries.GetAuthors;
-using WebApi.Application.GenreOperations.Commands.CreateGenre;
-using WebApi.Application.GenreOperations.Commands.DeleteGenre;
-using WebApi.Application.GenreOperations.Commands.UpdateGenre;
-using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
-using WebApi.Application.GenreOperations.Queries.GetGenres;
 using WebApi.DBOperations;
 
 namespace WebApi.Controllers

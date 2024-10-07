@@ -1,10 +1,6 @@
 using AutoMapper;
 using FluentValidation;
-using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using WebApi.Application.GenreOperations.Commands.CreateGenre;
 using WebApi.Application.GenreOperations.Commands.DeleteGenre;
 using WebApi.Application.GenreOperations.Commands.UpdateGenre;
@@ -18,9 +14,9 @@ namespace WebApi.Controllers
     [Route("[controller]s")]
     public class GenreController : ControllerBase
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
         private readonly IMapper _mapper;
-        public GenreController(BookStoreDbContext context, IMapper mapper)
+        public GenreController(IBookStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

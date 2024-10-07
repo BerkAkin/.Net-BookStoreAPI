@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bj7BuxjXZTU=",
+  "dgSpecHash": "DsVWR3NUW/k=",
   "success": true,
-  "projectFilePath": "c:\\Users\\berka\\Desktop\\BookStore\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\berka\\Desktop\\BookStore\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\berka\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\berka\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
