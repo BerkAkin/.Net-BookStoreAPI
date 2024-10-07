@@ -126,3 +126,5 @@ C:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\obj\Debug\net5.0\refint\
 C:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\obj\Debug\net5.0\WebApi.UnitTests.pdb
 C:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\obj\Debug\net5.0\WebApi.UnitTests.genruntimeconfig.cache
 C:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\obj\Debug\net5.0\ref\WebApi.UnitTests.dll
+c:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\EntityFramework.SqlServer.dll
+c:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\EntityFramework.dll
