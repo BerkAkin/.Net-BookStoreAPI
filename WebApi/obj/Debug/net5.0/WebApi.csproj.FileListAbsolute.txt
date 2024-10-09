@@ -41,3 +41,10 @@ C:\Users\berka\Desktop\BookStore\WebApi\obj\Debug\net5.0\refint\WebApi.dll
 C:\Users\berka\Desktop\BookStore\WebApi\obj\Debug\net5.0\WebApi.pdb
 C:\Users\berka\Desktop\BookStore\WebApi\obj\Debug\net5.0\WebApi.genruntimeconfig.cache
 C:\Users\berka\Desktop\BookStore\WebApi\obj\Debug\net5.0\ref\WebApi.dll
+c:\Users\berka\Desktop\BookStore\WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+c:\Users\berka\Desktop\BookStore\WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+c:\Users\berka\Desktop\BookStore\WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+c:\Users\berka\Desktop\BookStore\WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+c:\Users\berka\Desktop\BookStore\WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+c:\Users\berka\Desktop\BookStore\WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+c:\Users\berka\Desktop\BookStore\WebApi\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll

@@ -128,3 +128,10 @@ C:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\obj\Debug\net5.0\WebApi.
 C:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\obj\Debug\net5.0\ref\WebApi.UnitTests.dll
 c:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\EntityFramework.SqlServer.dll
 c:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\EntityFramework.dll
+c:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+c:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+c:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+c:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+c:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+c:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+c:\Users\berka\Desktop\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
