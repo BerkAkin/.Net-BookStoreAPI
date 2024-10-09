@@ -8,6 +8,7 @@ using WebApi.Application.AuthorOperations.Queries.GetAuthors;
 using WebApi.Application.AuthorOperations.Queries.GetAuthorDetail;
 using WebApi.Application.AuthorOperations.Commands.CreateAuthor;
 using WebApi.Application.AuthorOperations.Commands.UpdateAuthor;
+using WebApi.Application.UserOperations.Commands.CreateUser;
 namespace WebApi.Common
 {
     public class MappingProfile : Profile
@@ -25,6 +26,8 @@ namespace WebApi.Common
             CreateMap<Author, AuthorDetailViewModel>();
             CreateMap<CreateAuthorViewModel, Author>();
             CreateMap<UpdateAuthorViewModel, Author>();
+
+            CreateMap<CreateUserModel, User>();
         }
     }
 }
